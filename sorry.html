@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For Kanishka ❤️</title>
+
+
+    <!-- =========================
+         CSS STARTS HERE
+    ========================== -->
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* PAGE */
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            color: #493737;
+
+
+            /* BEAUTIFUL BACKGROUND */
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(255, 130, 165, 0.35),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(170, 140, 255, 0.30),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #fff0f5,
+                    #f7efff,
+                    #fff8f0
+                );
+
+
+            background-size: 200% 200%;
+
+            animation:
+                backgroundMove 12s ease infinite;
+
+        }
+
+
+        /* MOVING BACKGROUND */
+
+        @keyframes backgroundMove {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+
+        }
+
+
+
+        /* =========================
+           FLOATING HEARTS
+        ========================== */
+
+        .hearts {
+
+            position: fixed;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+        }
+
+
+        .heart {
+
+            position: absolute;
+
+            bottom: -60px;
+
+            color: #ff7f9f;
+
+            font-size: 28px;
+
+            opacity: 0.7;
+
+            animation-name:
+                floatHeart;
+
+            animation-timing-function:
+                linear;
+
+            animation-iteration-count:
+                infinite;
+
+        }
+
+
+        .heart:nth-child(1) {
+
+            left: 5%;
+
+            animation-duration: 7s;
+
+        }
+
+
+        .heart:nth-child(2) {
+
+            left: 20%;
+
+            animation-duration: 10s;
+
+            animation-delay: 2s;
+
+        }
+
+
+        .heart:nth-child(3) {
+
+            left: 40%;
+
+            animation-duration: 8s;
+
+            animation-delay: 1s;
+
+        }
+
+
+        .heart:nth-child(4) {
+
+            left: 60%;
+
+            animation-duration: 11s;
+
+            animation-delay: 3s;
+
+        }
+
+
+        .heart:nth-child(5) {
+
+            left: 80%;
+
+            animation-duration: 9s;
+
+            animation-delay: 1s;
+
+        }
+
+
+        .heart:nth-child(6) {
+
+            left: 95%;
+
+            animation-duration: 12s;
+
+            animation-delay: 4s;
+
+        }
+
+
+        @keyframes floatHeart {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+
+            }
+
+
+            10% {
+
+                opacity: 0.7;
+
+            }
+
+
+            50% {
+
+                transform:
+                    translateY(-50vh)
+                    rotate(180deg);
+
+            }
+
+
+            90% {
+
+                opacity: 0.7;
+
+            }
+
+
+            100% {
+
+                transform:
+                    translateY(-120vh)
+                    rotate(360deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+
+        /* =========================
+           MAIN CARD
+        ========================== */
+
+        .card {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 650px;
+
+            max-width: 90%;
+
+            padding:
+                55px 40px;
+
+            text-align: center;
+
+            background:
+                rgba(255,255,255,0.78);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.9);
+
+            border-radius: 35px;
+
+            backdrop-filter:
+                blur(18px);
+
+            box-shadow:
+
+                0 30px 80px
+                rgba(85,45,65,0.18),
+
+                inset 0 1px 0
+                rgba(255,255,255,0.9);
+
+            animation:
+                cardAppear 1.2s ease;
+
+        }
+
+
+        @keyframes cardAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px)
+                    scale(0.95);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+
+            }
+
+        }
+
+
+
+        /* =========================
+           SMALL TEXT
+        ========================== */
+
+        .tiny {
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                5px;
+
+            font-size:
+                10px;
+
+            color:
+                #b48696;
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+
+        /* =========================
+           PENGUIN
+        ========================== */
+
+        .penguin {
+
+            font-size:
+                70px;
+
+            margin-bottom:
+                5px;
+
+            display:
+                inline-block;
+
+            animation:
+                penguinBounce
+                2s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        @keyframes penguinBounce {
+
+            0%, 100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+
+            50% {
+
+                transform:
+                    translateY(-8px)
+                    rotate(-3deg);
+
+            }
+
+        }
+
+
+
+        /* =========================
+           TITLE
+        ========================== */
+
+        h1 {
+
+            margin:
+                0 0 20px;
+
+            font-size:
+                clamp(55px, 11vw, 90px);
+
+            font-weight:
+                normal;
+
+            font-style:
+                italic;
+
+            letter-spacing:
+                -3px;
+
+            color:
+                #493737;
+
+            text-shadow:
+                0 5px 20px
+                rgba(100,50,70,0.10);
+
+            animation:
+                titleFloat
+                3s
+                ease-in-out
+                infinite;
+
+        }
+
+
+        @keyframes titleFloat {
+
+            0%, 100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+
+            50% {
+
+                transform:
+                    translateY(-5px);
+
+            }
+
+        }
+
+
+
+        /* =========================
+           MESSAGE
+        ========================== */
+
+        .message {
+
+            max-width:
+                520px;
+
+            margin:
+                25px auto;
+
+            font-size:
+                20px;
+
+            line-height:
+                1.9;
+
+            color:
+                #665555;
+
+        }
+
+
+
+        /* =========================
+           QUESTION
+        ========================== */
+
+        .question {
+
+            margin-top:
+                30px;
+
+            font-size:
+                26px;
+
+            font-weight:
+                bold;
+
+            color:
+                #493737;
+
+        }
+
+
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
+        .buttons {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            gap:
+                18px;
+
+            margin-top:
+                30px;
+
+            min-height:
+                60px;
+
+        }
+
+
+        button {
+
+            border:
+                none;
+
+            padding:
+                15px 34px;
+
+            border-radius:
+                999px;
+
+            font-size:
+                16px;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            cursor:
+                pointer;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+
+        }
+
+
+        /* YES */
+
+        .yes {
+
+            color:
+                white;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #5b4040,
+                    #8a5f6b
+                );
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(90,60,70,0.25);
+
+        }
+
+
+        .yes:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.03);
+
+            box-shadow:
+
+                0 14px 30px
+                rgba(90,60,70,0.30);
+
+        }
+
+
+        /* NO */
+
+        .no {
+
+            color:
+                #5a4848;
+
+            background:
+                rgba(255,255,255,0.75);
+
+            border:
+                1px solid
+                rgba(120,90,90,0.15);
+
+        }
+
+
+        .no:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+
+        /* =========================
+           SUCCESS SCREEN
+        ========================== */
+
+        .success {
+
+            animation:
+                successAppear
+                1s
+                ease;
+
+        }
+
+
+        @keyframes successAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(0.75);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+
+            }
+
+        }
+
+
+        .big-heart {
+
+            font-size:
+                65px;
+
+            animation:
+                heartbeat
+                1.2s
+                infinite;
+
+        }
+
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+
+                transform:
+                    scale(1);
+
+            }
+
+
+            50% {
+
+                transform:
+                    scale(1.2);
+
+            }
+
+        }
+
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .card {
+
+                padding:
+                    45px 25px;
+
+            }
+
+
+            .message {
+
+                font-size:
+                    18px;
+
+            }
+
+
+            .question {
+
+                font-size:
+                    22px;
+
+            }
+
+
+            .penguin {
+
+                font-size:
+                    60px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =========================
+         FLOATING HEARTS HTML
+    ========================== -->
+
+    <div class="hearts">
+
+        <div class="heart">❤️</div>
+
+        <div class="heart">💗</div>
+
+        <div class="heart">💕</div>
+
+        <div class="heart">❤️</div>
+
+        <div class="heart">💗</div>
+
+        <div class="heart">💕</div>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <div class="card" id="card">
+
+
+        <div class="tiny">
+
+            A little something for you
+
+        </div>
+
+
+        <div class="penguin">
+
+            🐧
+
+        </div>
+
+
+        <h1>
+
+            I'm sorry.
+
+        </h1>
+
+
+        <p class="message">
+
+            Kanishka, I really am sorry. ❤️
+
+            <br>
+
+            I know I messed up.
+
+        </p>
+
+
+        <p class="question">
+
+            Will you forgive me? 🥺
+
+        </p>
+
+
+        <div class="buttons">
+
+
+            <button
+                class="yes"
+                onclick="yesClicked()">
+
+                Yes ❤️
+
+            </button>
+
+
+            <button
+                class="no"
+                onclick="noClicked()">
+
+                No
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        let stage = 0;
+
+
+        const card =
+            document.getElementById(
+                "card"
+            );
+
+
+
+        /* =========================
+           YES BUTTON
+        ========================== */
+
+        function yesClicked() {
+
+
+            card.innerHTML = `
+
+                <div class="success">
+
+
+                    <div class="big-heart">
+
+                        ❤️
+
+                    </div>
+
+
+                    <div class="penguin">
+
+                        🐧💕
+
+                    </div>
+
+
+                    <h1
+                        style="
+                            font-size:55px;
+                            letter-spacing:-2px;
+                        "
+                    >
+
+                        YEEE! 🥹
+
+                    </h1>
+
+
+                    <p class="message">
+
+                        Thank you so much,
+                        mi amor. ❤️
+
+                    </p>
+
+
+                    <p class="message">
+
+                        You make me the
+                        happiest man in
+                        the world.
+
+                    </p>
+
+
+                    <p class="message">
+
+                        🐧💕 Forever grateful
+                        for you.
+
+                    </p>
+
+
+                </div>
+
+            `;
+
+
+            createExtraHearts();
+
+        }
+
+
+
+        /* =========================
+           NO BUTTON
+        ========================== */
+
+        function noClicked() {
+
+
+            stage++;
+
+
+
+            /* FIRST NO */
+
+            if (stage === 1) {
+
+
+                card.innerHTML = `
+
+
+                    <div class="penguin">
+
+                        🥺🐧
+
+                    </div>
+
+
+                    <div class="tiny">
+
+                        okay...
+                        let me try again
+
+                    </div>
+
+
+                    <p class="message">
+
+                        I'll never do this again.
+
+                        <br><br>
+
+                        
+                    
+
+                        <br><br>
+
+                        Please forgive me. ❤️
+
+                    </p>
+
+
+                    <p class="question">
+
+                        Please? 🥺
+
+                    </p>
+
+
+                    <div class="buttons">
+
+
+                        <button
+                            class="yes"
+                            onclick="yesClicked()">
+
+                            Yes ❤️
+
+                        </button>
+
+
+                        <button
+                            class="no"
+                            onclick="noClicked()">
+
+                            No
+
+                        </button>
+
+
+                    </div>
+
+                `;
+
+            }
+
+
+
+            /* SECOND NO */
+
+            else if (stage === 2) {
+
+
+                card.innerHTML = `
+
+
+                    <div class="penguin">
+
+                        😭🐧
+
+                    </div>
+
+
+                    <div class="tiny">
+
+                        my heart is breaking
+
+                    </div>
+
+
+                    <p class="message">
+
+                        I'm gonna cry if you
+                        don't forgive me. 😭
+
+                    </p>
+
+
+                    <p class="question">
+
+                        Do you really wanna
+                        see your pengu cry?
+
+                    </p>
+
+
+                    <div class="buttons">
+
+
+                        <button
+                            class="yes"
+                            onclick="yesClicked()">
+
+                            Yes ❤️
+
+                        </button>
+
+
+                        <button
+                            class="no"
+                            onclick="noClicked()">
+
+                            No
+
+                        </button>
+
+
+                    </div>
+
+                `;
+
+            }
+
+
+
+            /* FINAL NO */
+
+            else {
+
+
+                card.innerHTML = `
+
+
+                    <div class="penguin">
+
+                        😭🐧
+
+                    </div>
+
+
+                    <div class="tiny">
+
+                        final attempt...
+
+                    </div>
+
+
+                    <p class="message">
+
+                        I'm crying now...
+
+                        <br><br>
+
+                        Please forgive your
+                        pengu. 🥺
+
+                    </p>
+
+
+                    <p class="question">
+
+                        One last chance? ❤️
+
+                    </p>
+
+
+                    <div class="buttons">
+
+
+                        <button
+                            class="yes"
+                            onclick="yesClicked()">
+
+                            Yes ❤️
+
+                        </button>
+
+
+                        <button
+                            class="no"
+                            id="escapeButton">
+
+                            No
+
+                        </button>
+
+
+                    </div>
+
+                `;
+
+
+                makeButtonRunAway();
+
+            }
+
+        }
+
+
+
+        /* =========================
+           RUNNING NO BUTTON
+        ========================== */
+
+        function makeButtonRunAway() {
+
+
+            const button =
+                document.getElementById(
+                    "escapeButton"
+                );
+
+
+            function escapeButton() {
+
+
+                const padding = 20;
+
+
+                const maxX =
+                    window.innerWidth
+                    -
+                    button.offsetWidth
+                    -
+                    padding;
+
+
+                const maxY =
+                    window.innerHeight
+                    -
+                    button.offsetHeight
+                    -
+                    padding;
+
+
+                const randomX =
+                    Math.random()
+                    *
+                    maxX;
+
+
+                const randomY =
+                    Math.random()
+                    *
+                    maxY;
+
+
+                button.style.position =
+                    "fixed";
+
+
+                button.style.left =
+                    randomX + "px";
+
+
+                button.style.top =
+                    randomY + "px";
+
+
+            }
+
+
+            button.addEventListener(
+                "mouseover",
+                escapeButton
+            );
+
+
+            button.addEventListener(
+                "touchstart",
+                escapeButton
+            );
+
+
+            button.addEventListener(
+                "click",
+                escapeButton
+            );
+
+        }
+
+
+
+        /* =========================
+           EXTRA HEARTS AFTER YES
+        ========================== */
+
+        function createExtraHearts() {
+
+
+            for (
+                let i = 0;
+                i < 20;
+                i++
+            ) {
+
+
+                const heart =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                heart.innerHTML =
+                    Math.random() > 0.5
+                    ? "❤️"
+                    : "💗";
+
+
+                heart.style.position =
+                    "fixed";
+
+
+                heart.style.left =
+                    Math.random() * 100
+                    + "%";
+
+
+                heart.style.bottom =
+                    "-30px";
+
+
+                heart.style.fontSize =
+                    (
+                        15 +
+                        Math.random() * 25
+                    )
+                    + "px";
+
+
+                heart.style.animation =
+                    "floatHeart "
+                    +
+                    (
+                        4 +
+                        Math.random() * 5
+                    )
+                    +
+                    "s linear";
+
+
+                heart.style.pointerEvents =
+                    "none";
+
+
+                document.body.appendChild(
+                    heart
+                );
+
+
+                setTimeout(
+                    () => heart.remove(),
+                    9000
+                );
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
